@@ -1,0 +1,8 @@
+services:
+  youtube-downloader:
+    build: .
+    container_name: youtube_downloader
+    volumes:
+      - ./downloaded_songs:/app/downloaded_songs  # Map a local folder to save MP3s
+    environment:
+      - PYTHONUNBUFFERED=1
